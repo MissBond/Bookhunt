@@ -4,9 +4,9 @@ const GET_BOOKS = 'GET_BOOKS';
 
 const getBooks = books => ({type: GET_BOOKS, books});
 
-export const fetchBooks = (title) => async dispatch => {
+export const fetchBooks = (searchTerm) => async dispatch => {
   try {
-    const {data} = await axios.get(`http://openlibrary.org/search.json?q=${title}`);
+    const {data} = await axios.get(`http://openlibrary.org/search.json?q=${searchTerm}`);
     dispatch(getBooks(data.docs));
   } catch (err) {
     console.log(err);

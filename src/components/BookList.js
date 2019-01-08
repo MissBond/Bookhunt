@@ -10,8 +10,8 @@ const BookList = (props) => {
     <div>
       {books && books.map((book, i) => (
           <div key={i}>
-            {/* <Link to={`/book`}>{book.title}</Link> */}
-            <p>{book.title}</p>
+            {/* <Link>{book.title}</Link> */}
+            <a onClick={props.showDetails}>{book.title}</a>
             <img src={`https://covers.openlibrary.org/b/id/${book.cover_i}-S.jpg`} alt='Book Cover Thumbnail'/>
             <p>{book.author_name && book.author_name[0]}</p>
             <p>First Year Published: {book.first_publish_year}</p>
