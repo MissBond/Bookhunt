@@ -4,8 +4,6 @@ import {Link} from 'react-router-dom';
 
 const BookList = (props) => {
   const { books } = props;
-  console.log('books', books)
-
   return (
     <div>
       {books && books.map((book, i) => (
