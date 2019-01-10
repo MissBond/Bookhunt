@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
-import {fetchBooks, fetchSelectedBook, filterEBooks, filterPrintBooks, getBooks, sortRecent, sortEditions, clear, stateChange, error} from '../reducers/index';
+import {fetchBooks, fetchSelectedBook, filterEBooks, filterPrintBooks, getBooks, sortRecent, sortEditions, clear, stateChange, error} from '../actions';
 import SearchBar from './SearchBar';
 import BookList from './BookList';
 import Error from './Error';
@@ -24,7 +24,7 @@ class Home extends Component {
 
   filter = e => {
     const filterTerm = e.target.value;
-    const { books } = this.props;
+    const {books} = this.props;
 
     if (filterTerm === 'ebooks') {
       this.props.filterEBooks(books);
@@ -37,13 +37,11 @@ class Home extends Component {
 
   sort = e => {
     const sortTerm = e.target.value;
-    const { books } = this.props;
+    const {books} = this.props;
 
     if (sortTerm === 'recent') {
-      console.log('even', e.target.value)
       this.props.sortRecent(books);
     } else if (sortTerm === 'editions') {
-      console.log('even2', e.target.value)
       this.props.sortEditions(books);
     }
   }
@@ -53,29 +51,26 @@ class Home extends Component {
   }
 
   render () {
-    console.log(this.props.books)
     return (
         <div>
-
+          {/* Only show home components if book detail page is not visible */}
           {this.props.stateChange ?
-          <div>
-            <div className='home-container'>
-              <Header />
-              <SearchBar getBooks={this.getBooks} clearSearch={this.clearSearch} error={this.props.error}/>
+            <div>
+              <div className='home-container'>
+                <Header />
+                <SearchBar getBooks={this.getBooks} clearSearch={this.clearSearch} error={this.props.error}/>
+              </div>
+
+              {/* If book list is visible, show filters.
+              If not and user gives empty search, throw error */}
+              {!this.props.books.length ? <Error error={this.props.error}/> : <div className='selections'>
+                <Filter filter={this.filter} showComponent={false}/>
+                <Sort sort={this.sort}/>
+              </div> }
+
+              <BookList books={this.props.books} getSelectedBook={this.getSelectedBook}/>
             </div>
-
-            {this.props.books !== [] ?
-            <div className='selections'>
-              <Filter filter={this.props.filter}/>
-              <Sort sort={this.props.sort}/>
-            </div> : null}
-
-            <Error error={this.props.error}/>
-            <BookList books={this.props.books} getSelectedBook={this.getSelectedBook}/>
-
-          </div>
           : null}
-
        </div>
     )
   }

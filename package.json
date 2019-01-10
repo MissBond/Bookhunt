@@ -1,7 +1,8 @@
 {
-  "name": "bookhunt1",
+  "name": "bookhunt",
   "version": "0.1.0",
   "private": true,
+  "author": "Danielle Bond",
   "dependencies": {
     "axios": "^0.18.0",
     "promise": "^8.0.2",

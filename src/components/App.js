@@ -1,8 +1,7 @@
 import React from 'react';
-import {BrowserRouter as Router, Route} from 'react-router-dom'
-import Home from './Home'
+import {BrowserRouter as Router, Route} from 'react-router-dom';
+import Home from './Home';
 import BookDetailPage from './BookDetailPage';
-
 
 const App = () => (
   <Router>
@@ -12,6 +11,5 @@ const App = () => (
     </div>
   </Router>
 )
-
 export default App;
 
