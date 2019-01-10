@@ -2,9 +2,9 @@
 
 A simple way to search for your favorite book.
 
-##To Use:
+## To Use:
 
-Clone this repo and go into the directory
+Clone this repo and go into the directory.
 
 Install all dependencies.
 
@@ -31,7 +31,7 @@ To run the tests use
 npm test
 ```
 
-##Built With:
+## Built With:
 
 * React
 * Redux
