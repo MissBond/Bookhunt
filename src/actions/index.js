@@ -24,7 +24,7 @@ export const error = () => ({type: ERROR})
 
 export const fetchBooks = (searchTerm) => async dispatch => {
   try {
-    const {data} = await axios.get(`http://openlibrary.org/search.json?q=${searchTerm}`);
+    const {data} = await axios.get(`https://openlibrary.org/search.json?q=${searchTerm}`);
     dispatch(getBooks(data.docs));
   } catch (err) {
     console.log(err);
