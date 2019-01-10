@@ -1,0 +1,164 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  color: #000000;
+}
+
+a:visited {
+  color: #70ce7a;
+}
+
+.home-container, #header {
+  text-align: center;
+  display: block;
+  margin: 0 auto;
+  clear: both;
+  padding-top: 112px;
+  padding-bottom: 20px;
+}
+
+.logo {
+  font-family: 'Dosis', sans-serif;
+  font-size: 50px;
+  color: #70ce7a;
+  margin-bottom: -10px;
+}
+
+img#logo-img {
+  transform: rotate(135deg);
+  width: 130px;
+  margin: -25px;
+  margin-left: -46px;
+}
+
+.form {
+  text-align: center;
+}
+
+#form-search {
+  width: 450px;
+  line-height: 32px;
+  padding: 20px 10px;
+}
+
+.form #form-search {
+  padding: 0 8px;
+}
+
+#form-search:hover {
+  border-color: #e4e4e4;
+  padding-top: 0;
+}
+
+.buttons {
+  text-align: center;
+  padding-top: 15px;
+  margin-bottom: 10px;
+}
+
+.buttons * {
+  margin: .5%;
+  width: 110px;
+  height: 23px;
+}
+
+button:hover {
+  background-image: linear-gradient(#70ce7a, #fff);
+}
+
+.selections {
+  display: flex;
+  justify-content: center;
+}
+
+#book-list {
+  margin: 20px;
+}
+
+ul {
+  list-style-type: none;
+  width: 500px;
+  margin: 0 auto;
+}
+
+h2 {
+  font: bold 20px/1.5 'Roboto', sans-serif;
+}
+
+li#book-list-items img {
+  float: left;
+  margin: 0 15px 0 0;
+}
+
+li#book-list-items p {
+  font: 200 12px/1.5 Georgia, Times New Roman, serif;
+}
+
+li#book-list-items {
+  padding: 10px;
+  overflow: auto;
+}
+
+li#book-list-items:hover {
+  background: #eee;
+  cursor: pointer;
+}
+
+select#custom-select {
+  -webkit-appearance: button;
+  -webkit-border-radius: 2px;
+  -webkit-box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.1);
+  -webkit-padding-end: 20px;
+  -webkit-padding-start: 2px;
+  -webkit-user-select: none;
+  background-image: url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+  background-position: 97% center;
+  background-repeat: no-repeat;
+  border: 1px solid #AAA;
+  color: #555;
+  font-size: inherit;
+  margin: 20px;
+  overflow: hidden;
+  padding: 2px 10px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 150px;
+  font-size: 12px;
+}
+
+label#filter-by-label {
+  font-size: 13px;
+}
+
+div#book-details {
+  width: 500px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+}
+
+h2.book-detail-title {
+  font-family: 'Roboto', sans-serif;
+  text-decoration: underline;
+  font-size: 17px;
+  margin-bottom: 8%;
+}
+
+img.book-detail-img {
+  float: right;
+  width: 50%;
+}
+
+div#back {
+  text-align: left;
+  margin: -1%;
+}
+
+.error {
+  text-align: center;
+  margin-top: 2%;
+}
+
