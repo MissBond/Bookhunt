@@ -1,5 +1,7 @@
 # Bookhunt
 
+View deployed app at: https://bookhunt1.herokuapp.com/
+
 A simple way to search for your favorite book.
 
 ## To Use:
@@ -36,4 +38,4 @@ npm test
 * React
 * Redux
 
-View app at: https://bookhunt1.herokuapp.com/
+
